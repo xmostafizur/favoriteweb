@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Animated Buttons</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #b3e5fc, #0288d1); /* Aqua gradient */
+            overflow: hidden;
+        }
+
+        /* Button Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Button Styling */
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            position: relative;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Icon Styling */
+        .button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover img {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text Styling */
+        .button span {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hug Video Button -->
+        <a href="https://www.media.io/apps/ai-effect/?effect=magic_effect_hugging" target="_blank" class="button">
+            <img src="https://i.ibb.co/0KmfPR4/2682178.png" alt="Hug Video Logo">
+            <span>Hug Video</span>
+        </a>
+
+        <!-- Dress Change Button -->
+        <a href="https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On" target="_blank" class="button">
+            <img src="https://i.ibb.co/jhcK92S/11592315.png" alt="Dress Change Logo">
+            <span>Dress Change</span>
+        </a>
+    </div>
+</body>
+</html>
